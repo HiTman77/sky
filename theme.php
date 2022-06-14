@@ -24,6 +24,7 @@
 		<?= $Wcms->alerts() ?>
 		<section id="topMenu">
 			<div class="inner">
+<a class="navbar-brand" href="<?=$Wcms->url()?>" title="<?=$Wcms->page('title')?> on <?=$Wcms->get('config','siteTitle')?>"><img src="/data/files/logo.png" alt="<?=$Wcms->page('title')?>"></a>
 				<nav>
 					<ul class="menu">
 						<?= $Wcms->menu() ?>
