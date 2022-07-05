@@ -17,7 +17,7 @@
 		<meta name="twitter:title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
 		<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
 		<?= $Wcms->css() ?>
-		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>">
+		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?v1">
 	</head>
 	<body>
 		<?= $Wcms->settings() ?>
