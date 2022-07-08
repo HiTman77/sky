@@ -1,49 +1,49 @@
 <?php global $Wcms ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title><?= $Wcms->page('title') ?> - <?= $Wcms->get('config', 'siteTitle') ?></title>
-		<meta name="title" content="<?= $Wcms->page('title') ?> - <?= $Wcms->get('config', 'siteTitle') ?>" />
-		<meta name="description" content="<?= $Wcms->page('description') ?>">
-		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
-		<meta property="og:url" content="<?= $this->url() ?>" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="<?= $Wcms->get('config', 'siteTitle') ?>" />
-		<meta property="og:title" content="<?= $Wcms->page('title') ?>" />
-		<meta name="twitter:site" content="<?= $this->url() ?>" />
-		<meta name="twitter:title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
-		<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
-		<?= $Wcms->css() ?>
-		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?v1">
-	</head>
-	<body>
+<head>
+<title><?= $Wcms->page('title') ?> - <?= $Wcms->get('config', 'siteTitle') ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="<?= $Wcms->page('title') ?> - <?= $Wcms->get('config', 'siteTitle') ?>" />
+<meta name="description" content="<?= $Wcms->page('description') ?>">
+<meta property="og:url" content="<?= $this->url() ?>" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="<?= $Wcms->get('config', 'siteTitle') ?>" />
+<meta property="og:title" content="<?= $Wcms->page('title') ?>" />
+<meta name="twitter:site" content="<?= $this->url() ?>" />
+<meta name="twitter:title" content="<?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?>" />
+<meta name="twitter:description" content="<?= $Wcms->page('description') ?>" />
+<link rel="shortcut icon" href="/data/files/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<?= $Wcms->css() ?>
+<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?v<?php echo(rand(1,33));?><?php echo(rand(1,20));?>">
+</head>
+<body>
 		<?= $Wcms->settings() ?>
 		<?= $Wcms->alerts() ?>
-		<section id="topMenu">
+<section id="topMenu">
+<a class="navbar-brand" href="/"><img src="/data/files/logo.png" alt="<?= $Wcms->page('title') ?>"></a>
 			<div class="inner">
-<a class="navbar-brand" href="<?=$Wcms->url()?>" title="<?=$Wcms->page('title')?> on <?=$Wcms->get('config','siteTitle')?>"><img src="/data/files/logo.png" alt="<?=$Wcms->page('title')?>"></a>
 				<nav>
 					<ul class="menu">
 						<?= $Wcms->menu() ?>
 					</ul>
 				</nav>
 			</div>
-		</section>
+</section>
 		<div id="wrapper">
-			<section id="intro" class="wrapper style1 fullscreen">
-				<div class="inner">
-				<h3 align="center"><?= $Wcms->page('keywords') ?></h3>
-				<h4 align="center"><?= $Wcms->page('description') ?></h4>
-					<?= $Wcms->page('content') ?>
-				</div>
-			</section>
+<section id="intro" class="wrapper style1 fullscreen">
+<div class="inner">
+<div style="text-align:center"><h2><?= $Wcms->page('description') ?></h2>
+<h1><?= $Wcms->page('keywords') ?></h1></div>
+<?= $Wcms->page('content') ?>
+</div>
+</section>
 			<section class="wrapper style2">
 					<div class="inner">
 						<?= $Wcms->block('subside') ?>
-
 					</div>
 			</section>
 		</div>
@@ -53,5 +53,5 @@
 			</div>
 		</footer>
 		<?= $Wcms->js() ?>
-	</body>
+</body>
 </html>
