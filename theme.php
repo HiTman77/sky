@@ -24,13 +24,9 @@
 		<?= $Wcms->settings() ?>
 		<?= $Wcms->alerts() ?>
 <section id="topMenu">
-<a class="navbar-brand" href="/"><img src="/data/files/logo.png" alt="<?= $Wcms->page('title') ?>"></a>
+<a class="navbar-brand" href="/"><img src="/data/files/logo.svg" alt="<?= $Wcms->page('title') ?>"></a>
 			<div class="inner">
-				<nav>
-					<ul class="menu">
-						<?= $Wcms->menu() ?>
-					</ul>
-				</nav>
+<nav><ul class="menu"><?= $Wcms->menu() ?></ul></nav>
 			</div>
 </section>
 		<div id="wrapper">
@@ -41,11 +37,11 @@
 <?= $Wcms->page('content') ?>
 </div>
 </section>
-			<section class="wrapper style2">
-					<div class="inner">
-						<?= $Wcms->block('subside') ?>
-					</div>
-			</section>
+<section class="wrapper style2">
+<div class="inner">
+<?= $Wcms->block('subside') ?>
+</div>
+</section>
 		</div>
 		<footer class="wrapper style2">
 			<div class="inner">
