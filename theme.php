@@ -1,6 +1,6 @@
 <?php global $Wcms ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
 <title><?= $Wcms->page('title') ?> - <?= $Wcms->get('config', 'siteTitle') ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -21,18 +21,16 @@
 <link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>?v<?php echo(rand(1,33));?><?php echo(rand(1,20));?>">
 </head>
 <body>
-		<?= $Wcms->settings() ?>
-		<?= $Wcms->alerts() ?>
+<?= $Wcms->settings() ?>
+<?= $Wcms->alerts() ?>
 <section id="topMenu">
-<a class="navbar-brand" href="/"><img src="/data/files/logo.svg" alt="<?= $Wcms->page('title') ?>"></a>
-			<div class="inner">
-<nav><ul class="menu"><?= $Wcms->menu() ?></ul></nav>
-			</div>
+<a class="navbar-brand" href="/"><img src="/data/files/logo.png" height="100" srcset="/data/files/logo.png"></a>
+<div class="inner"><nav><ul class="menu"><?= $Wcms->menu() ?></ul></nav></div>
 </section>
-		<div id="wrapper">
+<div id="wrapper">
 <section id="intro" class="wrapper style1 fullscreen">
 <div class="inner">
-<div style="text-align:center"><h2><?= $Wcms->page('description') ?></h2>
+<div style="text-align:center;padding-top:80px;"><h2><?= $Wcms->page('description') ?></h2>
 <h1><?= $Wcms->page('keywords') ?></h1></div>
 <?= $Wcms->page('content') ?>
 </div>
@@ -42,12 +40,8 @@
 <?= $Wcms->block('subside') ?>
 </div>
 </section>
-		</div>
-		<footer class="wrapper style2">
-			<div class="inner">
-				<?= $Wcms->footer() ?>
-			</div>
-		</footer>
-		<?= $Wcms->js() ?>
+</div>
+<footer class="wrapper style2"><div class="inner"><?= $Wcms->footer() ?></div></footer>
+<?= $Wcms->js() ?>
 </body>
 </html>
